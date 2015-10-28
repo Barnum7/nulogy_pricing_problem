@@ -1,7 +1,9 @@
 This is a job price calculator written in Ruby 2.2.1 
 Testing is done from the command line in RSpec 3.3.2
+And exploratory testing was conducted during development
 LOGIC.md is the home for all psuedocode and problem decompositon
- 
+
+To execute the program simply open up your terminal. Direct yourself to the /lib directory and type "ruby job.rb". From here answer the prompts on your screen and you will have a job quote estimate generated for you.  
 
 Pricing problem
 =========
