@@ -28,15 +28,20 @@ class Job
 		additional_markup = people_markup + materials_markup + 1
 		final_price = initial_markup * additional_markup
 
-		puts final_price.round(2)
+		return final_price.round(2)
 	end
 
-	job = Job.new(1299.99, 3,'food')
-	job2 = Job.new(5432.00, 1, 'drugs')
-	job3 = Job.new(12456.95, 4, 'books')
+	puts "How much is your products base price?"
+	base_price = gets.chomp
+	puts "How many people are on the team?"
+	people = gets.chomp
+	puts "What materials are being handled?"
+	materials = gets.chomp
 
-	job.final_price
-	job2.final_price
-	job3.final_price
+	job = Job.new(base_price.to_i, people.to_i, materials)
+
+	final = job.final_price
+
+	puts "The final price for this is #{final}. Pleasure doing business with you!"
 
 end
