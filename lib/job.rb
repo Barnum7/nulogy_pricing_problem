@@ -9,12 +9,39 @@ class Job
 	public
 
 	def initial_markup
-		starting_price = @base_price * 1.05
-		puts starting_price
+		initial_markup = @base_price * 1.05
+		puts initial_markup
 	end
 
-	job = Job.new(10,1,'bats')
+	def people_markup
+		people_markup = @people * 0.012
+		puts people_markup
+	end
 
-	job.initial_markup 
+	def materials_markup
+		case material = @materials
+		when 'drugs'
+			materials_markup = 0.075
+		when 'food'
+			materials_markup = 0.13
+		when 'electronics'
+			materials_markup = 0.02
+		else 
+			materials_markup = 0
+		end
+
+		puts materials_markup
+	end
+
+	def final_price
+		additional_markup = people_markup + materials_markup + 1
+		final_price = initial_markup * additional_markup
+
+		puts final_price
+	end
+
+	job = Job.new(1299.99,3,'food')
+
+	job.final_price
 
 end
