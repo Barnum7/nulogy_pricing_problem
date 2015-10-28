@@ -1,5 +1,6 @@
 This is a job price calculator written in Ruby 2.2.1 
 Testing is done from the command line in RSpec 3.3.2
+LOGIC.md is the home for all psuedocode and problem decompisiton 
 
 Pricing problem
 =========
