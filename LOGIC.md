@@ -1,3 +1,10 @@
+"Job Class Instance Method"
+
+- Class Object 
+
+
+"Command Line Application Method"
+
 - The calculator needs to be able to bring in a base price input.
 - This first input will immediately be multiplied by 1.05 for the 5% flat markup. This will be saved in a variable called "starting_price"
 -The next input will be the number of people. The number of people will be multipled by .012. The value returned from this multiplication will be saved in a variable called "people_markup"
