@@ -40,10 +40,10 @@ class Job
 	puts "What materials are being handled?"
 	materials = gets.chomp
 
-	job = Job.new(base_price.to_string, people, materials)
+	job = Job.new(base_price.to_f, people.to_i, materials)
 
 	final = job.final_price
 
-	puts "The final price for this is #{final}. Pleasure doing business with you!"
+	puts "The final price for this is $#{final}. Pleasure doing business with you!"
 
 end
