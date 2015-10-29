@@ -33,8 +33,6 @@ class Job
 
 	puts "How much is your products base price?"
 	base_price = gets.chomp
-	#it's the gets.chomp that is messing the math. Cutting off decimal values
-	#must figure this out
 	puts "How many people are on the team?"
 	people = gets.chomp
 	puts "What materials are being handled?"
