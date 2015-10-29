@@ -25,20 +25,22 @@ class Job
 			materials_markup = 0
 		end
 
-		additional_markup = people_markup + materials_markup + 1
-		final_price = initial_markup * additional_markup
+		additional_markup = people_markup + materials_markup + 1.00
+		final_estimate = initial_markup * additional_markup
 
-		return final_price.round(2)
+		return final_estimate.round(2)
 	end
 
 	puts "How much is your products base price?"
 	base_price = gets.chomp
+	#it's the gets.chomp that is messing the math. Cutting off decimal values
+	#must figure this out
 	puts "How many people are on the team?"
 	people = gets.chomp
 	puts "What materials are being handled?"
 	materials = gets.chomp
 
-	job = Job.new(base_price.to_i, people.to_i, materials)
+	job = Job.new(base_price.to_string, people, materials)
 
 	final = job.final_price
 
